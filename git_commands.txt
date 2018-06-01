@@ -1,0 +1,205 @@
+
+check if git is working or not 
+=======================================
+git --version
+
+setting name and email to git 
+=======================================
+git config --global user.name "rit-esh"
+git config --global user.email "riteshprajapati3.14@gmail.com"
+
+check username and email 
+=======================================
+git config --list 
+
+start git project 
+=======================================
+goto respective directory cd/directory-path
+git init
+
+to check git status 
+=======================================
+git status
+
+to ignore files from git 
+=======================================
+touch .gitignore
+
+HINT: IN CREATED GITIGNORE FILE we havr to specify which files to ignore by git by just simply typing the name file to gitignore 
+
+adding specific file to staging area 
+=======================================
+git add filename.php
+
+adding all files to staging area 
+=======================================
+git add .
+
+remove files from staging area 
+=======================================
+git reset file.txt
+
+remove all files from staging area 
+======================================= 
+git reset 
+
+Removing git changes till a specific point 
+========================================
+git reset --hard fe8a00e49067a8b6042b63a62032208854e3ef71
+
+Note : Changes could not be retrieved !
+
+commiting files to git
+=======================================
+git commit -m "Initial setup for idea projetcs"
+
+view log (list all the commits made)
+=======================================
+git log 
+
+git log --oneline 
+git log --oneline --graph
+
+cloning a remote repository 
+=======================================
+git clone url_of_remote_repository .
+HINT : SINGLE DOT . AT THE END OF THE COMMAND SPECIFY LOCAL DIRECTORY . MEANS CURRENT DIRECTORY
+
+Difference between current and added file        (used when we add a file to staging area yet change it )
+=========================================
+git diff index.php
+
+Tip: if you see the differences and want to current file instead if the one added to staging area just run git add again to the same file 
+
+
+Delete git commit 
+===========================================
+git reset --hard commitcode34543653454fdgdfvgcdxfasffsdfsdfa
+
+Overriding a commit 
+===========================================
+git commit --amend  commitcode34543653454fdgdfvgcdxfasffsdfsdfa
+
+create a new branch (first check you out from current branch then create the required branch) 
+===========================================
+git checkout -b 
+
+
+Going back to a previous version of commit (just checkout that branch , remember there are a hell lot of ways with diff outputs)
+===========================================
+git checkout  e2e3d53f4baca81b0c7af0330c16e33e53abf97c
+
+Switch between branches 
+===========================================
+git checkout branchname
+
+Merge Branches 
+===========================================
+git merge branchname 
+
+Note: here it is assumed that you are on the master branch
+
+Merge conflict 
+===========================================
+Merge conflict occurs when same file in both branches have been modified differently . these file will be marked by <<<<<<<<<<<< symbols , to remove merge conflict open the files in the editor and decide which changes to keep , you can git status to see the files in which merge conflicts occurs 
+
+so after making sure which changes to keep as the file will contain code from both the branches run
+git add . 
+to include all file to the staging area and then 
+git commit to merge the changes  
+
+Adding a remote repository 
+===========================================
+remote add origin https://github.com/try-git/try_git.git
+
+Pushing Changes to remote repository
+==========================================
+git push -u origin master 
+git push -u	new-remote-repo branchname
+
+Note : Here our remote name is origin , as given with the previous command ans our branch name is master 
+
+Pull Changes to our branch 
+============================================
+git pull origin master 
+
+See all Branches 
+============================================
+git branch 
+
+Create a New Branch 
+============================================
+git branch branchname 
+
+Note : no message is given to let you now if branch is created or not use git branch for that 
+
+
+Navigating between logs 
+============================================
+when logs becames log to move
+DOWN   =  E
+UP     = W
+QUIT   = Q
+
+making alias for commands
+============================================
+git config --global alias.s status
+
+note these changes are being made to .globalconfig file located at the home directory [subl  ~/.gitconfig]
+so changes can also be done manually from that file directly
+
+Save changes temporarily 
+===========================================
+git stash
+note : if we apply git status working directory will be clean as we have stashed our changes 
+
+See temporarily saved changes 
+===========================================
+git stash list
+
+Apply temporary changes 
+=============================================
+git stash pop [will revert to the most recent stash and delete it from the list ]
+NOTE : we could have multiple options here so to apply specific changes we could use 
+git stash apply stash@{3} [for third stashed object but it will not pop you out from stash list] 
+
+delete temporary changes 
+=============================================
+git stash drop [simply to delete the changes and pop them out from the list] 
+
+Push a project to github
+=============================================
+git remote add origin https://github.com/riteshprajapati/laravel-project.git
+git push -u origin master
+
+clone a repository 
+=============================================
+git clone repository-url
+
+git rebase
+=============================================
+git rebase master 
+[note rebasing to master means you are on some other branch rather than master and want to rebase that branch commits to master]
+
+interactive rebasing 
+========================================
+git rebase -i master 
+hard to explain :(
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

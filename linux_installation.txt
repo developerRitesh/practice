@@ -1,0 +1,9 @@
+1. go to official website and download the latest iso file for cinnammon(could be different according to time).
+2. make a bootable pendrive using rufus or any other bootable client.
+3. Install pendrive in system and start/restart pc and press f8 multiple times to enter into bootable mode, select you pendrive to boot from it.
+    //Note: i had 2 hardisk in the system so i used one drive for root directory and another for home directory so that on further crash my home directory remain unaffected.
+4.Now click on install linux option and select the drives that you want to use , for home directory select the desired harddrive and select ext4 as the drive format and select home directory dropdown 
+    //NOTE:do not check on the format drive option , that way data on the home directory wont get deleted.
+now select the second hardisk for and select / for assigning it as root , select the drive format as ext4 . click on it and click on install now .
+
+voila . thats it note that some of your settings may remain unaffected if the home directory is used from another system .       
